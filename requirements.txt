@@ -2,4 +2,5 @@ glob2==0.7 # handle files and dir
 ipython==8.4.0 # for visualization of our audio sample
 librosa==0.9.1 # for audio extraction
 matplotlib==3.5.2 # for visualizations
+pandas==1.4.2 # for data wrangling
 playsound==1.3.0 # play audio samples on jupyter notebook
