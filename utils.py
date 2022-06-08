@@ -83,6 +83,6 @@ if __name__ == '__main__':
 
       # test_path = 'dataset/dog_bark/344-3-0-0.wav'
       # print(extract_features(test_path))
-      print(predict(config.PREDICTION_PATH))
+      # print(predict(config.PREDICTION_PATH))
       pass
 
