@@ -6,6 +6,7 @@ import config
 import pickle as pkl
 import librosa
 import numpy as np
+from pydub import AudioSegment
 import tensorflow as tf
 from tensorflow.keras.models import load_model 
 
@@ -60,11 +61,14 @@ def extract_features(path):
 
       return np.array(feature)
 
+def convert_mp3_to_wave(input_file,output_file):
+      sound = AudioSegment.from_mp3(input_file)
+      sound.export(output_file, format="wav")
 
 def predict(data_path):
 
-      labels = ['air_conditioner','car_horn','children_playing','dog_bark',
-          'drilling','engine_idling','gun_shot','jackhammer','siren',
+      labels = ['an air_conditioner','a car_horn','children_playing','a dog_bark',
+          'a drilling_machine','an engine_idling','a gun_shot','a jackhammer sound','a siren',
           'street_music']
       
       model = load_model(config.TRAINED_MODEL_PATH)
