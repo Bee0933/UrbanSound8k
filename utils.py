@@ -1,9 +1,18 @@
+from json import load
 import os
 import glob
 import shutil
 import config
+import pickle as pkl
 import librosa
 import numpy as np
+from pydub import AudioSegment
+import tensorflow as tf
+from tensorflow.keras.models import load_model 
+
+
+import warnings
+warnings.filterwarnings(action='ignore')
 
 audio_folders = [ 'air_conditioner', 'car_horn', 
 'children_playing', 'dog_bark', 'drilling', 
@@ -50,7 +59,25 @@ def extract_features(path):
       # scale the extracted features and transpose to a single dimension vector 
       feature = np.mean(mfcc.T, axis=0)
 
-      return list(feature)
+      return np.array(feature)
+
+def convert_mp3_to_wave(input_file,output_file):
+      sound = AudioSegment.from_mp3(input_file)
+      sound.export(output_file, format="wav")
+
+def predict(data_path):
+
+      labels = ['an air_conditioner','a car_horn','children_playing','a dog_bark',
+          'a drilling_machine','an engine_idling','a gun_shot','a jackhammer sound','a siren',
+          'street_music']
+      
+      model = load_model(config.TRAINED_MODEL_PATH)
+      output = extract_features(data_path).reshape(1,-1)
+      
+      # print(output)
+      res = model.predict(output)
+      prediction = res.argmax(axis=1)
+      return labels[prediction[0]]
 
 
 
@@ -60,5 +87,6 @@ if __name__ == '__main__':
 
       # test_path = 'dataset/dog_bark/344-3-0-0.wav'
       # print(extract_features(test_path))
+      # print(predict(config.PREDICTION_PATH))
       pass
 
