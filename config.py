@@ -11,7 +11,7 @@ PREDICTION_PATH = 'predict/gun.wav'
 LE_PATH = 'pickle_data/le'
 HTML_PATH = 'index.html'
 PREDICT_HTML_PATH = 'predict.html'
-CSS_PATH = ''
+CSS_PATH = 'static/css/main.css'
 UPLOAD_PATH = 'uploads'
 
 # parameters
