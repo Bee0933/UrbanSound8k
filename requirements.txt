@@ -1,5 +1,10 @@
+flask==2.1.2 # web app
 glob2==0.7 # handle files and dir
 ipython==8.4.0 # for visualization of our audio sample
 librosa==0.9.1 # for audio extraction
 matplotlib==3.5.2 # for visualizations
+numpy==1.22.4 # for numerical computations
+pandas==1.4.2 # for data wrangling
 playsound==1.3.0 # play audio samples on jupyter notebook
+pydub==0.25.1 # convert audio data
+tensorflow==2.8.2 # fro building ANN
