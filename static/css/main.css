@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 
+/* <<<<<<< dev-branch */
 /* basic resets */
 *,
 *::after,
@@ -305,4 +306,117 @@ button {
     max-width: 100em;
     margin: 0 auto;
   }
+
+body{
+      padding-top: 2em;
+      padding-left: 5em;
+      padding-right: 5em;
+      background-color: #09192F; 
+      color: #FFFFFF;  
+      font-family: Poppins; 
+}
+
+.logo svg{
+      height: 48px;
+      width: 197px;      
+}
+
+.hero{
+      margin-top: 2em;
+      display: flex;
+      justify-content: space-between;
+
+}
+.box2{
+      display: flex;
+      padding-right: 12em;
+      justify-content: space-between;
+}
+h1{
+      font-size: 2.2rem;
+      font-weight: bolder;
+      padding-left: 100px;
+}
+h3{
+      color: #CCD6F6;
+      font-weight: lighter;
+      font-size: 1.0rem;
+}
+
+.arrow{
+      padding-top: 90px;
+      margin-right: 2em;
+}
+.desc{
+      padding-top: 90px;
+      color: #64FFDA;
+      font-size:0.9rem;
+      font-weight:lighter;
+}
+
+.urban{
+      color: #8892B0;
+      font-weight: bold;
+      font-family: Poppins;
+      transform: rotate(90deg);
+      position: absolute;
+      font-size: 3.2rem;
+      height: 150px;
+      top: 220px;
+      right: -20px;
+      opacity: 0.5;
+}
+.urban span{
+      color: #64FFDA;      
+}
+
+
+.enclosure{
+      width: 250px;
+      padding: 14px;
+      text-align: left;
+      bottom: 20px;
+      background-color: #09192F;
+      border: 1px solid #64FFDA;
+}
+.input-file{
+      background-color: #64FFDA;
+      margin: 8px;
+      padding: 10px;
+      font-size: 0.7rem;
+      color: #09192F;
+      font-weight: normal;
+      position: relative;
+}
+.btn{
+      color: #64FFDA;
+      display: block;
+      background-color: #09192F;
+      border: 1px solid #64FFDA;
+      text-decoration: none;
+      padding: 8px 30px;
+      cursor: pointer;
+}
+
+.input-form{
+      color: #CCD6F6;
+      font-size:1rem;
+      font-weight:lighter;
+      top: 0;
+}
+.in-fmt{
+      color: #CCD6F6;
+      font-size: 0.7rem;
+}
+.result{
+      font-weight: lighter;
+      text-align: center;
+}
+  
+.res-box{
+      background-color: #0c2035;
+      font-size:1rem;
+      font-weight: lighter;
+      color: #FFFFFF;
+      padding: 10px;
 }
