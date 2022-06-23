@@ -35,7 +35,7 @@
 
     <main class="hero">
       <div class="box1">
-        <h1>Urban sound <br />Classification</h1>
+        <h1>Urban sound Classification</h1>
 
         <h3>Recognised classes:</h3>
 
@@ -182,43 +182,41 @@
         </div>
 
         <p class="desc">
-          Lorem ipsum dolor sit<br />
-          amet, consectetur adipiscing elit,<br />
-          sed do eiusmod tempor incididuntut<br />
-          labore et dolore magna<br />
-          aliqua. Ut enim ad minim<br />
-          veniam, quis nostrud <br />exercitation ullamco laboris nisi<br />
-          ut aliquip ex ea<br />
-          commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
         </p>
       </div>
     </main>
+    <aside>
+      <h2 class="urban">URBANSOUND<span>8K</span></h2>
+    </aside>
 
-    <h2 class="urban">URBANSOUND<span>8K</span></h2>
+    <div class="form-cnt">
+      <form
+        class="input-form"
+        action="/"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="enclosure">
+          <p class="in-fmt">allowed formats: | .mp3 | .wav |</p>
+          <label for="audio" class="input-file">upload file</label>
+          <input
+            type="file"
+            value="Upload file"
+            class="input-file"
+            name="audio"
+            id="audio"
+            style="display: none"
+          />
+        </div>
+        <br />
 
-    <form
-      class="input-form"
-      action="/"
-      method="POST"
-      enctype="multipart/form-data"
-    >
-      <div class="enclosure">
-        <p class="in-fmt">allowed formats: | .mp3 | .wav |</p>
-        <label for="audio" class="input-file">upload file</label>
-        <input
-          type="file"
-          value="Upload file"
-          class="input-file"
-          name="audio"
-          id="audio"
-          style="display: none"
-        />
-      </div>
-      <br />
-
-      <button type="submit" class="btn">Predict</button>
-    </form>
-
+        <button type="submit" class="btn">Predict</button>
+      </form>
+    </div>
     <div class="result">
       Prediction: <span class="res-box"> {{ prediction }} </span>
     </div>

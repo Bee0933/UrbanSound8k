@@ -42,14 +42,16 @@ button {
 }
 
 .hero {
-  width: 100%;
   margin: 2rem auto;
 }
 
 .box1 h1 {
   font-size: 1rem;
+  width: 10rem;
   text-align: center;
   margin-bottom: 2.5rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .box1 h3 {
@@ -73,29 +75,30 @@ button {
 }
 
 .box2 .arrow > svg {
+  display: none;
   width: 5rem;
   padding: 0 10px;
 }
 
 .box2 .desc {
+  max-width: 40em;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   font-size: 0.8rem;
   font-weight: 200;
   color: rgba(100, 255, 218, 0.99);
   letter-spacing: 0.02em;
   opacity: 0.5;
   flex-grow: 1;
-  width: 100%;
   text-align: center;
   line-height: 1.2rem;
-}
-
-.urban {
-  display: none;
 }
 
 .input-form {
   text-align: center;
   width: 90vw;
+  height: 10em;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
@@ -109,16 +112,19 @@ button {
 }
 
 .enclosure {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 0.3rem;
   padding: 1.5rem;
   border: 1px solid rgba(100, 255, 218, 0.99);
 }
 
 .input-file {
   background-color: rgba(100, 255, 218, 0.99);
+  font-size: 14px;
   color: #09192f;
-  padding: 0.4rem;
+  padding: 0.7rem;
   z-index: 10;
   text-transform: uppercase;
   cursor: pointer;
@@ -133,6 +139,7 @@ button {
   padding: 1rem;
   font-weight: 100;
   font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
 .btn:hover {
@@ -151,6 +158,7 @@ button {
   font-weight: lighter;
   text-align: center;
   margin-bottom: 2rem;
+  margin-top: 5rem;
 }
 
 .res-box {
@@ -161,90 +169,140 @@ button {
   padding: 0.8rem;
 }
 
-/* 
-
-.hero {
-  margin-top: 2em;
-  display: flex;
-  justify-content: space-between;
-}
-.box2 {
-  display: flex;
-  padding-right: 12em;
-  justify-content: space-between;
-}
-.arrow {
-  padding-top: 90px;
-  margin-right: 2em;
-}
-.desc {
-  padding-top: 90px;
-  color: #64ffda;
-  font-size: 0.9rem;
-  font-weight: lighter;
-}
-
 .urban {
+  display: none;
+  width: 30rem;
+  padding: 1rem;
+  position: fixed;
+  top: 16rem;
+  right: -10rem;
   color: #8892b0;
   font-weight: bold;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   transform: rotate(90deg);
-  position: absolute;
   font-size: 3.2rem;
-  height: 150px;
-  top: 220px;
-  right: -20px;
   opacity: 0.5;
 }
 .urban span {
   color: #64ffda;
 }
 
-.enclosure {
-  width: 250px;
-  padding: 14px;
-  text-align: left;
-  bottom: 20px;
-  background-color: #09192f;
-  border: 1px solid #64ffda;
-}
-.input-file {
-  background-color: #64ffda;
-  margin: 8px;
-  padding: 10px;
-  font-size: 0.7rem;
-  color: #09192f;
-  font-weight: normal;
-  position: relative;
-}
-.btn {
-  color: #64ffda;
-  display: block;
-  background-color: #09192f;
-  border: 1px solid #64ffda;
-  text-decoration: none;
-  padding: 8px 30px;
-  cursor: pointer;
-}
+/*  tablets */
+@media screen and (min-width: 640px) {
+  .hero .box1 h1 {
+    width: 20rem;
+    font-size: xx-large;
+  }
 
-.input-form {
-  color: #ccd6f6;
-  font-size: 1rem;
-  font-weight: lighter;
-  top: 0;
+  .hero .box1 h3 {
+    font-size: x-large;
+  }
+
+  .box1 .classes > svg {
+    width: 600px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .box2 .desc {
+    font-size: 0.88rem;
+    margin-bottom: -1rem;
+  }
+
+  .enclosure {
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
-.in-fmt {
-  color: #ccd6f6;
-  font-size: 0.7rem;
+/* larger screens ( laptops ....) */
+@media screen and (min-width: 1024px) {
+  .logo {
+    text-align: left;
+    max-width: 100em;
+  }
+  .hero {
+    max-width: 100em;
+    display: flex;
+  }
+  .box1 {
+    padding-left: 5rem;
+    width: 60%;
+  }
+
+  .hero .box1 h1 {
+    width: 50rem;
+    font-size: 37.3596px;
+    padding-left: 3rem;
+    margin-bottom: 0;
+  }
+
+  .box1 h3 {
+    font-size: 26.36px;
+    text-align: left;
+  }
+
+  .box1 .classes {
+    text-align: left;
+  }
+
+  .box1 .classes > svg {
+    width: 700px;
+    margin-top: 1.5rem;
+  }
+
+  .box2 {
+    position: relative;
+    padding-top: 0;
+    width: 70%;
+    margin-top: 3rem;
+    margin-left: -4rem;
+  }
+
+  .box2 .desc {
+    text-align: left;
+    font-size: 0.8rem;
+    flex-grow: 0;
+    width: 200px;
+    height: 341px;
+    margin: 0;
+    margin-left: 2rem;
+    margin-top: 1.4rem;
+  }
+
+  .box2 .arrow > svg {
+    display: block;
+    width: 104px;
+    padding: 0 10px;
+  }
+
+  .urban {
+    display: block;
+  }
+
+  .input-form {
+    text-align: left;
+    padding: 2rem;
+    margin: 0;
+    margin-left: 3.5rem;
+    margin-top: -12rem;
+    width: 30em;
+    max-width: 100em;
+  }
+
+  .enclosure {
+    width: auto;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 2rem;
+  }
+
+  .input-file {
+    font-size: 10px;
+  }
+
+  .form-cnt {
+    max-width: 100em;
+    margin: 0 auto;
+  }
 }
-.result {
-  font-weight: lighter;
-  text-align: center;
-}
-.res-box {
-  background-color: #0c2035;
-  font-size: 1rem;
-  font-weight: lighter;
-  color: #ffffff;
-  padding: 10px;
-} */

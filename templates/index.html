@@ -35,7 +35,7 @@
 
     <main class="hero">
       <div class="box1">
-        <h1>Urban sound <br />Classification</h1>
+        <h1>Urban sound Classification</h1>
 
         <h3>Recognised classes:</h3>
 
@@ -189,30 +189,33 @@
         </p>
       </div>
     </main>
+    <aside>
+      <h2 class="urban">URBANSOUND<span>8K</span></h2>
+    </aside>
 
-    <h2 class="urban">URBANSOUND<span>8K</span></h2>
+    <div class="form-cnt">
+      <form
+        class="input-form"
+        action="/"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="enclosure">
+          <p class="in-fmt">allowed formats: | .mp3 | .wav |</p>
+          <label for="audio" class="input-file">upload file</label>
+          <input
+            type="file"
+            value="Upload file"
+            class="input-file"
+            name="audio"
+            id="audio"
+            style="display: none"
+          />
+        </div>
+        <br />
 
-    <form
-      class="input-form"
-      action="/"
-      method="POST"
-      enctype="multipart/form-data"
-    >
-      <div class="enclosure">
-        <p class="in-fmt">allowed formats: | .mp3 | .wav |</p>
-        <label for="audio" class="input-file">upload file</label>
-        <input
-          type="file"
-          value="Upload file"
-          class="input-file"
-          name="audio"
-          id="audio"
-          style="display: none"
-        />
-      </div>
-      <br />
-
-      <button type="submit" class="btn">Predict</button>
-    </form>
+        <button type="submit" class="btn">Predict</button>
+      </form>
+    </div>
   </body>
 </html>
